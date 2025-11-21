@@ -1,13 +1,10 @@
 /*
-    PinSim Controller v20200517
+    PinSim Controller v20251121
     Controller for PC Pinball games
     https://www.youtube.com/watch?v=18EcIxywXHg
 
-    Based on the excellent MSF_FightStick XINPUT project by Zack "Reaper" Littell
-    https://github.com/zlittell/MSF-XINPUT
-
-    Migrated to Arduino XInput Library (https://github.com/dmadison/ArduinoXInput)
-    Supports Teensy 4.0 and other compatible boards
+    Based on the Arduino XInput Library by David Madison
+    https://github.com/dmadison/ArduinoXInput
 
     IMPORTANT PLUNGER NOTE:
     You MUST calibrate the plunger range at least once by holding down "A"
@@ -614,6 +611,8 @@ void flashStartButton()
 void setup()
 {
   // Initialize XInput library
+  // Note: For Teensy with XInput USB mode, ensure ArduinoXInput_Teensy package is installed
+  // If you get multiple definition errors, the core and library are conflicting
   XInput.begin();
   // Enable auto-send so we don't need to call send() manually (but we'll keep it for explicit control)
   XInput.setAutoSend(false);
