@@ -20,7 +20,7 @@ I have included compiled code that can be installed on a Teensy LC using the [Te
 
 #### Setup instructions:
 
-1. Install "XInput" library via Arduino Library Manager (by David Madison)
+1. Install all required libraries via Arduino Library Manager
 2. Download ArduinoXInput_Teensy from: https://github.com/dmadison/ArduinoXInput_Teensy
 3. Follow installation instructions to copy files to Teensy hardware folder
 4. Restart Arduino IDE
